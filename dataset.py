@@ -5,16 +5,21 @@ import torch
 class Config:
     TAG_to_ix = {"n":0,"t":1,"s":2,"f":3,"m":4,"q":5,"b":6,"r":7,"v":8,"a":9,"z":10,"d":11,"p":12,"c":13,\
             "u":14,"y":15,"e":16,"o":17,"i":18,"l":19,"j":20,"h":21,"k":22,"g":23,"x":24,"w":25} # 空的补0
-    EMBEDDING_DIM = 100#6 # 词向量的特征维度
-    HIDDEN_DIM = 12 # 隐藏层的单元数
-    LAYER = 2 #LSTM层数
-    DROP_RATE = 0.1 #Dropout概率
-    BATCH_SIZE = 24 # 批大小
     FILE_NAME = "./data/1998-01-2003_shuf.txt"
-    LR = 0.1
+
+    EMBEDDING_DIM = 100#6 # 词向量的特征维度
+    HIDDEN_DIM = 200 # 隐藏层的特征维度
+    LAYER = 1 #LSTM层数
+    MAX_len = 660
+
+    DROP_RATE = 0.5 #Dropout概率
+    BATCH_SIZE = 24 # 批大小
+    
+    LR = 0.015
+    weight_decay = 1.0e-8
     gamma = 0.98
     step = 200
-    MAX_len = 660
+    
 
 config = Config()
 
