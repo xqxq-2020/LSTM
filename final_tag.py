@@ -87,9 +87,8 @@ class LSTM_Model(object):
                         loss += self.loss_function(tag_scores[i][:lens_batch[i]], tags_batch_list[i])
                     loss_total += loss
 
-                    if _iter % (100 * self.batch_size) == 0:
-                        print("iter ",str(_iter), "loss:",loss_total/500,\
-                                " lr:",self.optimizer.state_dict()['param_groups'][0]['lr'])
+                    if (_iter + self.batch_size) % (100 * self.batch_size) == 0:
+                        print("iter ",_iter, "loss:",loss_total/100, " lr:",self.optimizer.state_dict()['param_groups'][0]['lr'])
                         loss_total = 0
                         
                     _iter += self.batch_size
