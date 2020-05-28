@@ -42,21 +42,20 @@ class LSTM_Model(object):
         self.max_accuracy = 0.
 
         if weighted_tag: #是否对类别加权
-            self.loss_function = nn.NLLLoss(torch.tensor(self.tag_weights,dtype=torch.float))
+            self.loss_function = nn.CrossEntropyLoss(weight=self.tag_weights)
         else:
-            self.loss_function = nn.NLLLoss()
+            self.loss_function = nn.CrossEntropyLoss()
 
         self.lstm_model = lstmTagger(self.config.EMBEDDING_DIM, self.config.HIDDEN_DIM, self.word_to_ix_length,\
                           len(self.config.TAG_to_ix), self.config.LAYER, self.config.DROP_RATE, self.config.BATCH_SIZE,\
                           self.args.bidirection)
        
-
     #模型训练
     def train(self):
         self.lstm_model.train() # set mode
-        #self.optimizer = optim.SGD(self.lstm_model.parameters(), lr=self.config.LR)
+        self.optimizer = optim.SGD(self.lstm_model.parameters(), lr=self.config.LR, weight_decay=self.config.weight_decay)
         #self.lr_scheduler = torch.optim.lr_scheduler.StepLR(self.optimizer, step_size=self.config.step, gamma=self.config.gamma)
-        self.optimizer = optim.Adam(self.lstm_model.parameters(), lr=self.config.LR)
+        #self.optimizer = optim.Adam(self.lstm_model.parameters(), lr=self.config.LR)
         # set gpu
         self.lstm_model.cuda(0)
         self.loss_function.cuda(0)
