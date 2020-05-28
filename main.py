@@ -1,5 +1,7 @@
 import os
 import argparse
+import torch
+from final_tag import LSTM_Model
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-g', '--gpu', default = [], nargs='+', type=str, help='Specify GPU id.')

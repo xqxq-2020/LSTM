@@ -22,7 +22,7 @@ class LSTMTagger(nn.Module):
                             dropout = self.drop_rate, batch_first=True, bidirectional=self.bidirect)
         ## 如果batch_first为True，输入输出数据格式是(batch, seq_len, feature)
         ## 为False，输入输出数据格式是(seq_len, batch, feature)，
-        self.dropout = nn.Dropout(self.config.DROP_RATE)
+        self.dropout = nn.Dropout(self.drop_rate)
 
         if self.bidirect:
             self.hidden2tag = nn.Linear(self.hidden_dim*2, self.tagset_size)
@@ -49,4 +49,4 @@ class LSTMTagger(nn.Module):
 
         #tag_scores = F.log_softmax(tag_space, dim=1)
         
-        return tag_scores
+        return tag_space
