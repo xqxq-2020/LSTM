@@ -124,7 +124,7 @@ class Dataset(object):
         idxs = [to_ix[w] for w in seq]
         return idxs
 
-    def gene_trainbatch(self, _iter):
+    def gene_batch(self, data, _iter):
         '''
         traindata loader for training;
         对不同长度的句子进行补齐，便于batch-based train
@@ -133,7 +133,7 @@ class Dataset(object):
         train_batch_sentences = []
         train_batch_tags = []
         train_len = []
-        for sentence, tag in self.training_data[_iter:]:
+        for sentence, tag in data[_iter:]:
             train_len.append(len(sentence))
 
             pad_sentence = self.prepare_sequence(sentence, self.word_to_ix)

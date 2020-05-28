@@ -1,7 +1,5 @@
 #coding: UTF-8
 import time
-import os
-import argparse
 
 import torch
 import torch.nn as nn
@@ -14,17 +12,6 @@ import seaborn as sns
 
 from net import LSTMTagger
 from dataset import Dataset, config
-
-parser = argparse.ArgumentParser()
-parser.add_argument('-g', '--gpu', default = [], nargs='+', type=str, help='Specify GPU id.')
-parser.add_argument( '-e', '--epoch', type=int, help='train epoch number')
-parser.add_argument( '--checkpoint', default = './', type=str, help='checkpoint.')
-parser.add_argument( '--seed', default = 1, type=int, help='seed for pytorch init')
-parser.add_argument( '-b','--bidirection', action='store_true', help='use bi-direction lstm or not')
-args = parser.parse_args()
-print(args)
-
-torch.manual_seed(args.seed)
 
 class LSTM_Model(object):
     def __init__(self, args, lstmTagger = LSTMTagger, DataSet = Dataset, config = config, weighted_tag=False):
@@ -67,7 +54,7 @@ class LSTM_Model(object):
 
             while _iter < len(self.training_data):
                 #try:
-                    sentences_batch,tags_batch_list,lens_batch = self.dataset.gene_trainbatch(_iter) #（tensor 形式的sentens,tags）
+                    sentences_batch,tags_batch_list,lens_batch = self.dataset.gene_batch(self.training_data, _iter) #（tensor 形式的sentens,tags）
                     # set gpu
                     sentences_batch = sentences_batch.cuda(0)
                     for i in range(len(tags_batch_list)):
@@ -101,6 +88,7 @@ class LSTM_Model(object):
             # Test
             self.test()
             print("One epoch use time:",time.clock()-start)
+
 
     def test(self):
         print("******Testing...")
@@ -171,15 +159,4 @@ class LSTM_Model(object):
         plt.savefig("Con_Matrix.png")
         '''
         print("The confusion matrix is saved in Con_Matrix.txt")
-
-#if __name__ == '__main__':
-# main
-
-if args.gpu:
-    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu[0]
-
-model = LSTM_Model(args)
-model.train()
-    
-
 
