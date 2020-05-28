@@ -75,7 +75,7 @@ class LSTM_Model(object):
                         tags_batch_list[i] = tags_batch_list[i].cuda(0)
 
                     #self.lr_scheduler.step() # lr
-                    self.lstm_model.zero_grad()
+                    self.optimizer.zero_grad()
                     
                     # input
                     tag_scores = self.lstm_model(sentences_batch, lens_batch)
