@@ -2,6 +2,7 @@ import os
 import argparse
 import torch
 from final_tag import LSTM_Model
+from lstm_crf import LSTM_CRF_model
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-g', '--gpu', default = [], nargs='+', type=str, help='Specify GPU id.')
@@ -17,8 +18,8 @@ torch.manual_seed(args.seed)
 if args.gpu:
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu[0]
 
-model = LSTM_Model(args)
-model.train()
+#model = LSTM_Model(args)
+#model.train()
 
-#lstm_encoder = LSTM_CRF_model(args)
-#LSTM_CRF_model.train()
+lstm_encoder = LSTM_CRF_model(args)
+LSTM_CRF_model.train()

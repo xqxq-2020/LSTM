@@ -172,6 +172,22 @@ class Dataset(object):
         
         return (tensor_sentences, train_batch_tags_down, train_len_down)
 
+    def gene_traindata(self):
+        '''
+        testdata loader for testing;
+        不基于batch了，不必对齐
+        '''
+        inputs_set = []
+        targets_set = []
+        for item in self.training_data:
+            inputs = self.prepare_sequence(item[0],self.word_to_ix)
+            targets = self.prepare_sequence(item[1],self.config.TAG_to_ix)
+
+            inputs_set.append(inputs)
+            targets_set.append(targets)
+        
+        return inputs_set, targets_set
+        
     def gene_testdata(self):
         '''
         testdata loader for testing;
