@@ -34,8 +34,10 @@ class LSTMTagger(nn.Module):
         self.dropout = nn.Dropout(self.drop_rate)
 
         if self.bidirect:
+            print("双向LSTM")
             self.hidden2tag = nn.Linear(self.hidden_dim*2, self.tagset_size)
         else:
+            print("单向LSTM")
             self.hidden2tag = nn.Linear(self.hidden_dim, self.tagset_size)# hidden to tag
 
     def forward(self, sentence, lens_batch, is_test=False):
@@ -56,8 +58,6 @@ class LSTMTagger(nn.Module):
             x = torch.tanh(x)
             tag_space = self.hidden2tag(lstm_out.view(len(sentence), -1))
 
-        #tag_scores = F.log_softmax(tag_space, dim=1)
-        
         return tag_space
 
 # 训练实例
@@ -95,7 +95,7 @@ class LSTM_Model(object):
         self.loss_function.cuda(0)
 
         for epoch in range(self.epoch):
-            print("================= Epoch:",epoch,"/",self.epoch,"===============")
+            print("\n================= Epoch:",epoch,"/",self.epoch,"===============")
             start = time.clock()
             _iter,loss_total = 0,0
 

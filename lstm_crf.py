@@ -166,7 +166,7 @@ class BiLSTM_CRF_model(object):
         self.lstm_crf_model.cuda(0)
 
         for i in range(self.epoch):
-            print("----------- Epoch:",i,"-----------")
+            print("\n----------- Epoch:",i,"/",self.epoch," -----------")
             start = time.clock()
             _iter = 0
             loss_total = 0
@@ -184,7 +184,10 @@ class BiLSTM_CRF_model(object):
                 
                 loss_total += loss
                 if _iter % 100==0:
-                    print("Iter ",_iter,"   loss:",loss_total/100)
+                    if _iter == 0:
+                        print("Iter ",_iter,"   loss:",loss_total)
+                    else:
+                        print("Iter ",_iter,"   loss:",loss_total/100)
                     loss_total = 0
 
                 _iter += 1
@@ -193,8 +196,6 @@ class BiLSTM_CRF_model(object):
 
     def test(self):
         print("**********Testing...")
-        self.lstm_crf_model.load_state_dict(torch.load("crf_log_all/epoch_max_accuracy.pkl"))
-        print("load successful")
         with torch.no_grad():
             num = 0
             total_word = 0
