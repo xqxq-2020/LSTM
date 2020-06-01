@@ -1,37 +1,64 @@
 # Tagging-LSTM
 
-#### 介绍
-NLP大作业：使用LSTM进行汉语词类标注
+## 介绍
+NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
-#### 软件架构
-软件架构说明
+## 环境
 
+1.  PyTorch 1.0.1
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+2.  Python 3.7
 
 
-#### 码云特技
+## 使用说明
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 1.  单向LSTM网络模型训练
+
+```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1```
+
+参数含义：
+
+--epoch: 训练epoch数
+
+--checkpoint: 模型存储路径
+
+--gpu: GPU序号
+
+--seed: 模型初始化随机种子设置
+
+--weighted_tag：计算损失函数时对类别加权 (可选)
+
+默认为基于mini-batch的模型训练，若要修改batch size大小，可修改 dataset.py 中 Config 类的 BATCH_SIZE 参数。
+
+#### 2.  双向LSTM网络模型
+
+```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1 --bidirection```
+
+参数含义：
+
+--bidirection: 使用双向LSTM
+
+默认为基于mini-batch的模型训练，若要修改batch size大小，可修改 dataset.py 中 Config 类的 BATCH_SIZE 参数。
+
+#### 3.  BiLSTM-CRF模型
+
+```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1 --bidirection --crf```
+
+参数含义：
+
+--crf: 使用crf层
+
+未实现基于mini-batch的模型训练，训练速度较慢，但训练5个epoch后已经能达到 95% 以上的准确率
+
+## 实验结果
+
+| 模型         | 准确率    |
+|------------|--------|
+| 单向LSTM     | 88.38% |
+| 双向LSTM     | 87.61% |
+| BiLSTM-CRF | 95.49% |
+
+## 参考
+
+PyTorch官方代码 LSTM + CRF
+
