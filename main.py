@@ -10,6 +10,7 @@ parser.add_argument( '-e', '--epoch', type=int, help='train epoch number')
 parser.add_argument( '--checkpoint', default = './', type=str, help='checkpoint.')
 parser.add_argument( '--seed', default = 1, type=int, help='seed for pytorch init')
 parser.add_argument( '-b','--bidirection', action='store_true', help='use bi-direction lstm or not')
+parser.add_argument('--weighted_tag', action='store_true',help='use wighted loss or not' )
 args = parser.parse_args()
 print(args)
 
@@ -18,9 +19,10 @@ torch.manual_seed(args.seed)
 if args.gpu:
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu[0]
 
-#model = LSTM_Model(args)
-#model.train()
-
-model= BiLSTM_CRF_model(args)
+model = LSTM_Model(args)
 #model.test()
 model.train()
+
+#model= BiLSTM_CRF_model(args)
+#model.test()
+#model.train()

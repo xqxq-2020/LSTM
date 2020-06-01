@@ -14,7 +14,7 @@ from net import LSTMTagger
 from dataset import Dataset, config
 
 class LSTM_Model(object):
-    def __init__(self, args, lstmTagger = LSTMTagger, DataSet = Dataset, config = config, weighted_tag=False):
+    def __init__(self, args, lstmTagger = LSTMTagger, DataSet = Dataset, config = config):
         self.config = config
         self.args = args
         self.epoch = self.args.epoch
@@ -28,7 +28,8 @@ class LSTM_Model(object):
 
         self.max_accuracy = 0.
 
-        if weighted_tag: #是否对类别加权
+        if args.weighted_tag: #是否对类别加权
+            self.tag_weights = torch.tensor(self.tag_weights,dtype=torch.float)
             self.loss_function = nn.CrossEntropyLoss(weight=self.tag_weights)
         else:
             self.loss_function = nn.CrossEntropyLoss()
@@ -92,6 +93,9 @@ class LSTM_Model(object):
 
     def test(self):
         print("******Testing...")
+        #self.lstm_model.load_state_dict(torch.load("528log-single/epoch_max_accuracy.pkl"))
+        self.lstm_model.cuda(0)
+        print("Load successful")
         with torch.no_grad(): # test mode
             num = 0
             total_word = 0

@@ -4,7 +4,9 @@ import torch.autograd as autograd
 import torch.nn as nn
 import torch.optim as optim
 from dataset import Dataset, config
-
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+import numpy as np
 
 # 返回vec中每一行最大的那个元素的下标
 def argmax(vec):
@@ -194,8 +196,8 @@ class BiLSTM_CRF_model(object):
 
     def test(self):
         print("**********Testing...")
-        #self.lstm_crf_model.load_state_dict(torch.load("crf_log/epoch_max_accuracy.pkl"))
-        #print("load successful")
+        self.lstm_crf_model.load_state_dict(torch.load("crf_log_all/epoch_max_accuracy.pkl"))
+        print("load successful")
         with torch.no_grad():
             num = 0
             total_word = 0
@@ -218,18 +220,31 @@ class BiLSTM_CRF_model(object):
                     test_predicts.append(pred_tag[idx])
 
             accuracy = num / total_word
-            if accuracy > self.max_accuracy:
+            if accuracy >= self.max_accuracy:
                 self.max_accuracy = accuracy
                 # 计算混淆矩阵
-                #Confusion_matrix(test_labels, test_predicts)
+                self.Confusion_matrix(test_labels, test_predicts)
                 # save model
                 torch.save(self.lstm_crf_model.state_dict(),self.args.checkpoint+'/epoch_max_accuracy.pkl')
                 print("Max accuracy's model is saved in ",self.args.checkpoint+'/epoch_max_accuracy.pkl')
             
+            self.Confusion_matrix(test_labels, test_predicts)
             print("Acc:",accuracy,"(",num,'/',total_word,")","   Max acc so far:",self.max_accuracy) #单句的准确率
             
 
+    def Confusion_matrix(self, test_labels, test_predicts):
+        label_list = self.dataset.TAG_list_test
+        cm = confusion_matrix(test_labels, test_predicts)
+        cm = cm.astype(np.float32)
+        sums = []
+        for i in range(len(label_list)-1):#'x'类别没有
+            sums.append(np.sum(cm[i]))
 
+        for i in range(len(sums)):
+            for j in range(len(sums)):
+                cm[i][j]=round(float(cm[i][j])/float(sums[i]),2)#*100
+
+        np.savetxt('Con_Matrix.txt', cm, fmt="%.2f", delimiter=',')
 
 
 
