@@ -1,9 +1,10 @@
+import time
 import torch
 import torch.autograd as autograd
 import torch.nn as nn
 import torch.optim as optim
+from dataset import Dataset, config
 
-# 设置随机种子
 
 # 返回vec中每一行最大的那个元素的下标
 def argmax(vec):
@@ -20,6 +21,8 @@ def log_sum_exp(vec):  # 计算一维向量vec与其最大值的log_sum_exp
     # 减去最大值是为了防止数值溢出
     return max_score + torch.log(torch.sum(torch.exp(vec - max_score_broadcast)))
 
+START_TAG = "<START>"
+STOP_TAG = "<STOP>"
 
 class BiLSTM_CRF(nn.Module):
 
@@ -34,12 +37,11 @@ class BiLSTM_CRF(nn.Module):
         self.word_embeds = nn.Embedding(vocab_size, embedding_dim)  # 嵌入层
         self.lstm = nn.LSTM(embedding_dim, hidden_dim // 2,
                             num_layers=1, bidirectional=True)  # 双向LSTM
-
+        
         self.hidden2tag = nn.Linear(hidden_dim, self.tagset_size)  # LSTM的输出映射到标签空间
 
         # 转移矩阵的参数tag-->tag
-        self.transitions = nn.Parameter(torch.randn(self.tagset_size, self.tagset_size))
-
+        self.transitions = nn.Parameter(torch.randn(self.tagset_size, self.tagset_size)).cuda(0)
         # 限制不能转移到start，end不能转移到其他
         self.transitions.data[tag_to_ix[START_TAG], :] = -10000
         self.transitions.data[:, tag_to_ix[STOP_TAG]] = -10000
@@ -49,6 +51,7 @@ class BiLSTM_CRF(nn.Module):
         init_alphas = torch.full((1, self.tagset_size), -10000.)  # alpha初始为-10000
         init_alphas[0][self.tag_to_ix[START_TAG]] = 0.  # start位置的alpha为0
 
+        init_alphas = init_alphas.cuda(0)
         forward_var = init_alphas  # 包装进forward_var变量，以便于自动反向传播
 
         for feat in feats:  # 对于每个时间步，进行前向计算
@@ -79,7 +82,9 @@ class BiLSTM_CRF(nn.Module):
     def _score_sentence(self, feats, tags):
         # 计算给定标签序列的分数---发射分数+转移分数（真实分数）
         score = torch.zeros(1)
-        tags = torch.cat([torch.tensor([self.tag_to_ix[START_TAG]], dtype=torch.long), tags])
+        tags = torch.cat([torch.tensor([self.tag_to_ix[START_TAG]], dtype=torch.long).cuda(0), tags])
+        score = score.cuda(0)
+        tags = tags.cuda(0)
         for i, feat in enumerate(feats):
             score = score + self.transitions[tags[i + 1], tags[i]] + feat[tags[i + 1]]
         score = score + self.transitions[self.tag_to_ix[STOP_TAG], tags[-1]]
@@ -92,7 +97,8 @@ class BiLSTM_CRF(nn.Module):
         # 在log空间初始化维特比变量
         init_vvars = torch.full((1, self.tagset_size), -10000.)
         init_vvars[0][self.tag_to_ix[START_TAG]] = 0
-
+        
+        init_vvars = init_vvars.cuda(0)
         # 时间步i的forward_var拥有时间步i-1的维特比变量
         forward_var = init_vvars
         for feat in feats:  # 对于每个时间步
@@ -144,36 +150,84 @@ class BiLSTM_CRF_model(object):
     def __init__(self, args, lstm_crf = BiLSTM_CRF, DataSet = Dataset, config = config, weighted_tag=False):
         self.config = config
         self.args = args
-
-        self.lstm_crf_model = lstm_crf(self.dataset.word_to_ix_length, self.config.tag_to_ix, \
+        self.dataset = Dataset(self.config)
+        self.lstm_crf_model = lstm_crf(self.dataset.word_to_ix_length, self.config.TAG_to_ix_crf, \
                                 self.config.EMBEDDING_DIM,self.config.HIDDEN_DIM)
 
         self.optimizer = optim.SGD(self.lstm_crf_model.parameters(), lr=self.config.LR, weight_decay=self.config.weight_decay)
 
         self.train_data, self.train_tags = self.dataset.gene_traindata()
+        self.test_data, self.test_tags = self.dataset.gene_testdata()
+
+        self.epoch = self.args.epoch
+        self.max_accuracy = 0.
 
     def train(self):
         self.lstm_crf_model.train()
         self.lstm_crf_model.cuda(0)
 
-        for sentence, target in zip(self.train_data, self.train_tags):
-            sentence = torch.tensor(sentence, dtype=torch.long)
-            target = torch.tensor(target, dtype=torch.long)
+        for i in range(self.epoch):
+            print("----------- Epoch:",i,"-----------")
+            start = time.clock()
+            _iter = 0
+            loss_total = 0
+            for sentence, target in zip(self.train_data, self.train_tags):
+                sentence = torch.tensor(sentence, dtype=torch.long)
+                target = torch.tensor(target, dtype=torch.long)
                 
-            sentence = sentence.cuda(0)
-            target = target.cuda(0)
+                sentence = sentence.cuda(0)
+                target = target.cuda(0)
 
-            self.lstm_crf_model.zero_grad()
+                self.lstm_crf_model.zero_grad()
+                loss = self.lstm_crf_model.neg_log_likelihood(sentence, target)
+                loss.backward()
+                self.optimizer.step()
+                
+                loss_total += loss
+                if _iter % 100==0:
+                    print("Iter ",_iter,"   loss:",loss_total/100)
+                    loss_total = 0
 
-            score, predict_tag = self.lstm_crf_model(sentence)
-            print(score, predict_tag)
+                _iter += 1
+            print("Time use:",time.clock()-start)
+            self.test()
+
+    def test(self):
+        print("**********Testing...")
+        #self.lstm_crf_model.load_state_dict(torch.load("crf_log/epoch_max_accuracy.pkl"))
+        #print("load successful")
+        with torch.no_grad():
+            num = 0
+            total_word = 0
+            test_labels = []
+            test_predicts = []
+
+            self.lstm_crf_model.cuda(0)
+            for inputs, targets in zip(self.test_data[:3850], self.test_tags[:3850]):
+                total_word += len(inputs)
+
+                inputs = torch.tensor(inputs, dtype=torch.long)
+                
+                inputs = inputs.cuda(0)
+                
+                score, pred_tag = self.lstm_crf_model(inputs)
+                for idx, word in enumerate(pred_tag):
+                    if word == targets[idx]:
+                        num += 1
+                    test_labels.append(targets[idx])
+                    test_predicts.append(pred_tag[idx])
+
+            accuracy = num / total_word
+            if accuracy > self.max_accuracy:
+                self.max_accuracy = accuracy
+                # 计算混淆矩阵
+                #Confusion_matrix(test_labels, test_predicts)
+                # save model
+                torch.save(self.lstm_crf_model.state_dict(),self.args.checkpoint+'/epoch_max_accuracy.pkl')
+                print("Max accuracy's model is saved in ",self.args.checkpoint+'/epoch_max_accuracy.pkl')
             
-            loss = self.lstm_crf_model.neg_log_likelihood(sentence, targte)
-            loss.backward()
-            optimizer.step()
-            print(loss)
-
-
+            print("Acc:",accuracy,"(",num,'/',total_word,")","   Max acc so far:",self.max_accuracy) #单句的准确率
+            
 
 
 

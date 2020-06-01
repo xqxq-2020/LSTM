@@ -2,7 +2,7 @@ import os
 import argparse
 import torch
 from final_tag import LSTM_Model
-from lstm_crf import LSTM_CRF_model
+from lstm_crf import BiLSTM_CRF_model
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-g', '--gpu', default = [], nargs='+', type=str, help='Specify GPU id.')
@@ -21,5 +21,6 @@ if args.gpu:
 #model = LSTM_Model(args)
 #model.train()
 
-lstm_encoder = LSTM_CRF_model(args)
-LSTM_CRF_model.train()
+model= BiLSTM_CRF_model(args)
+#model.test()
+model.train()
