@@ -12,7 +12,11 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 ## 使用说明
 
-#### 1.  单向LSTM网络模型训练
+#### 1.  实验数据准备
+
+使用北京大学人民日报语料库，已分词的txt文档被存放在 data 路径下, 其中 1998-01-2003_shuf.txt 为经过随机shuffle的数据。
+
+#### 2.  单向LSTM网络模型训练
 
 ```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1```
 
@@ -30,7 +34,7 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 默认为基于mini-batch的模型训练，若要修改batch size大小，可修改 dataset.py 中 Config 类的 BATCH_SIZE 参数。
 
-#### 2.  双向LSTM网络模型
+#### 3.  双向LSTM网络模型
 
 ```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1 --bidirection```
 
@@ -40,7 +44,7 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 默认为基于mini-batch的模型训练，若要修改batch size大小，可修改 dataset.py 中 Config 类的 BATCH_SIZE 参数。
 
-#### 3.  BiLSTM-CRF模型
+#### 4.  BiLSTM-CRF模型
 
 ```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1 --bidirection --crf```
 
