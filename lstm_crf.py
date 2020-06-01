@@ -27,7 +27,6 @@ START_TAG = "<START>"
 STOP_TAG = "<STOP>"
 
 class BiLSTM_CRF(nn.Module):
-
     def __init__(self, vocab_size, tag_to_ix, embedding_dim, hidden_dim):
         super(BiLSTM_CRF, self).__init__()
         self.embedding_dim = embedding_dim  # 嵌入维度
@@ -59,21 +58,19 @@ class BiLSTM_CRF(nn.Module):
         for feat in feats:  # 对于每个时间步，进行前向计算
             alphas_t = []  # 当前时间步i的前向tensor
             for next_tag in range(self.tagset_size):  # next_tag有target_size个可能的取值
-                # 无论之前的tag是什么，发射分数总是一样的
                 emit_score = feat[next_tag].view(1, -1).expand(1, self.tagset_size)
-                # 转换分数的第i项是从i转向next_tag的分数
                 trans_score = self.transitions[next_tag].view(1, -1)
-                # next_tag_var第i项的值是在做log-sum-exp之前的边（i-->next_tag）的值
                 next_tag_var = forward_var + trans_score + emit_score
-                # tag的前向变量就是所有分数的log-sum-exp
                 alphas_t.append(log_sum_exp(next_tag_var).view(1))
+
             forward_var = torch.cat(alphas_t).view(1, -1)
+
         terminal_var = forward_var + self.transitions[self.tag_to_ix[STOP_TAG]]  # 添加stop_tag
         alpha = log_sum_exp(terminal_var)
         return alpha  # 每个时间步的得分（预测分数）
 
 
-    def _get_lstm_features(self, sentence):  # LSTM的输出---即发射分数
+    def _get_lstm_features(self, sentence):  # LSTM的输出
         embeds = self.word_embeds(sentence).view(len(sentence), 1, -1)
         lstm_out, self.hidden = self.lstm(embeds)
         lstm_out = lstm_out.view(len(sentence), self.hidden_dim)
@@ -114,7 +111,7 @@ class BiLSTM_CRF(nn.Module):
                 best_tag_id = argmax(next_tag_var)
                 bptrs_t.append(best_tag_id)
                 viterbivars_t.append(next_tag_var[0][best_tag_id].view(1))
-            # 现在添加发射分数，并将forward_var作为刚刚计算的维特比变量的集合
+
             forward_var = (torch.cat(viterbivars_t) + feat).view(1, -1)
             backpointers.append(bptrs_t)  # backpointer存放前一步最好的取值
 
@@ -128,7 +125,7 @@ class BiLSTM_CRF(nn.Module):
         for bptrs_t in reversed(backpointers):
             best_tag_id = bptrs_t[best_tag_id]
             best_path.append(best_tag_id)
-        # 删除start tag
+
         start = best_path.pop()
         assert start == self.tag_to_ix[START_TAG]  # 断言检查
         best_path.reverse()
@@ -139,11 +136,11 @@ class BiLSTM_CRF(nn.Module):
         feats = self._get_lstm_features(sentence)  # LSTM输出
         forward_score = self._forward_alg(feats)  # 前向计算分数
         gold_score = self._score_sentence(feats, tags)  # 真实分数
-        # logP(y|x) = gold_score - forward_score，最大化logP(y|x)即最小化forward_score - gold_score
+        # logP(y|x) = gold_score - forward_score
         return forward_score - gold_score
 
 
-    def forward(self, sentence):  # 注：与上面的前向计算不同
+    def forward(self, sentence):
         lstm_feats = self._get_lstm_features(sentence)  # 获得BiLSTM的发射分数
         score, tag_seq = self._viterbi_decode(lstm_feats)  # 给定特征，寻找最好的路径
         return score, tag_seq
@@ -239,12 +236,13 @@ class BiLSTM_CRF_model(object):
         sums = []
         for i in range(len(label_list)-1):#'x'类别没有
             sums.append(np.sum(cm[i]))
-
+        
         for i in range(len(sums)):
             for j in range(len(sums)):
-                cm[i][j]=round(float(cm[i][j])/float(sums[i]),2)#*100
+                cm[i][j]=round(float(cm[i][j])/float(sums[i]),2)
 
-        np.savetxt('Con_Matrix.txt', cm, fmt="%.2f", delimiter=',')
+        np.savetxt(self.args.checkpoint+'/Con_Matrix.txt', cm, fmt="%.2f", delimiter=',') #保存为2位小数的浮点数，用逗号分隔
+        print("The confusion matrix is saved in "+self.args.checkpoint+"/Con_Matrix.txt")
 
 
 

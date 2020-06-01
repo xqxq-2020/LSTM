@@ -73,7 +73,6 @@ class Dataset(object):
         
         tag_numpy = np.array(self.TAG_list,dtype=np.float32)
         tag_weights = (tag_numpy+1) / np.sum(tag_numpy) # +1是为防止某一类没有数据
-        #tag_weights = 1/np.log(1+tag_weights) #1.8是超参
         tag_weights = np.median(tag_weights)/tag_weights
         
         return training_data,tag_weights
@@ -204,9 +203,6 @@ class Dataset(object):
 
             inputs_set.append(inputs)
             targets_set.append(targets)
-        # 长度不同，不能直接tensor
-        #inputs_tensor = torch.tensor(inputs_set, dtype=torch.long)
-        #targets_tensor = torch.tensor(targets_set, dtype=torch.long)
         
         return inputs_set, targets_set
 
