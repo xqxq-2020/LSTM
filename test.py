@@ -3,7 +3,7 @@ import os
 import argparse
 import torch
 from dataset import Dataset, config
-#from lstm import LSTM_Model
+from lstm import lstmTagger
 from lstm_crf import BiLSTM_CRF
 
 parser = argparse.ArgumentParser()
@@ -22,7 +22,12 @@ if args.gpu:
 
 dataset_tool = Dataset(config)
 
-model = BiLSTM_CRF(dataset_tool.word_to_ix_length,config.TAG_to_ix_crf,config.EMBEDDING_DIM,config.HIDDEN_DIM)
+if args.checkpoint == 'checkpoint_bilstm_crf':
+    model = BiLSTM_CRF(dataset_tool.word_to_ix_length,config.TAG_to_ix_crf,config.EMBEDDING_DIM,config.HIDDEN_DIM)
+if args.checkpoint == 'checkpoint_lstm' or 'checkpoint_bilstm':
+    model = lstmTagger(config.EMBEDDING_DIM, config.HIDDEN_DIM, dataset_tool.word_to_ix_length,\
+                          len(config.TAG_to_ix), config.LAYER, config.DROP_RATE, config.BATCH_SIZE, self.args.bidirection)
+
 model.load_state_dict(torch.load(args.checkpoint+"/epoch_max_accuracy.pkl"))
 print("Loading model...")
 
