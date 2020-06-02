@@ -1,0 +1,1279 @@
+Namespace(bidirection=True, checkpoint='checkpoint_bilstm/', crf=False, epoch=100, gpu=['2'], seed=1, weighted_tag=False)
+word table length: 55004
+双向LSTM
+
+================= Epoch: 0 / 100 ===============
+iter  2376 loss: tensor(48.1623, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(37.5929, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(33.6078, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(30.9219, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(29.0273, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(27.0634, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.6144746529710704 ( 136873 / 222748 )    Max acc so far: 0.6144746529710704
+One epoch use time: 40.829919000000004
+
+================= Epoch: 1 / 100 ===============
+iter  2376 loss: tensor(24.5027, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(23.5222, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(22.0368, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(21.0173, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(19.9924, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(18.9928, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.7089715732576723 ( 157922 / 222748 )    Max acc so far: 0.7089715732576723
+One epoch use time: 40.390007000000004
+
+================= Epoch: 2 / 100 ===============
+iter  2376 loss: tensor(17.5759, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(17.1964, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(16.2921, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(15.8532, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(15.2146, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(14.6430, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.7583861583493454 ( 168929 / 222748 )    Max acc so far: 0.7583861583493454
+One epoch use time: 40.15990099999999
+
+================= Epoch: 3 / 100 ===============
+iter  2376 loss: tensor(13.7698, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(13.5611, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(12.9309, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(12.7588, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(12.2631, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(11.9124, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.7880654371756425 ( 175540 / 222748 )    Max acc so far: 0.7880654371756425
+One epoch use time: 40.62203100000002
+
+================= Epoch: 4 / 100 ===============
+iter  2376 loss: tensor(11.3170, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(11.1735, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(10.7066, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(10.6385, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(10.2549, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(10.0191, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8038680481979636 ( 179060 / 222748 )    Max acc so far: 0.8038680481979636
+One epoch use time: 40.18195699999998
+
+================= Epoch: 5 / 100 ===============
+iter  2376 loss: tensor(9.5715, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(9.4592, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(9.1100, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(9.0797, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(8.8025, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(8.6203, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8146784707382333 ( 181468 / 222748 )    Max acc so far: 0.8146784707382333
+One epoch use time: 40.12969899999999
+
+================= Epoch: 6 / 100 ===============
+iter  2376 loss: tensor(8.2617, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(8.1599, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(7.9093, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(7.8971, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(7.6969, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(7.5497, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8240567816546052 ( 183557 / 222748 )    Max acc so far: 0.8240567816546052
+One epoch use time: 40.08778799999996
+
+================= Epoch: 7 / 100 ===============
+iter  2376 loss: tensor(7.2446, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(7.1495, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(6.9765, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(6.9787, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(6.8271, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(6.7069, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8295248442185789 ( 184775 / 222748 )    Max acc so far: 0.8295248442185789
+One epoch use time: 40.327065000000005
+
+================= Epoch: 8 / 100 ===============
+iter  2376 loss: tensor(6.4331, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(6.3465, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(6.2304, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(6.2478, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(6.1269, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(6.0255, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8358189523587193 ( 186177 / 222748 )    Max acc so far: 0.8358189523587193
+One epoch use time: 40.45649400000002
+
+================= Epoch: 9 / 100 ===============
+iter  2376 loss: tensor(5.7720, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(5.6957, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(5.6187, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(5.6511, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(5.5543, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(5.4621, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8405193312622335 ( 187224 / 222748 )    Max acc so far: 0.8405193312622335
+One epoch use time: 40.52424500000001
+
+================= Epoch: 10 / 100 ===============
+iter  2376 loss: tensor(5.2248, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(5.1592, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(5.1075, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(5.1540, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(5.0786, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(4.9879, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8443173451613483 ( 188070 / 222748 )    Max acc so far: 0.8443173451613483
+One epoch use time: 39.639298999999994
+
+================= Epoch: 11 / 100 ===============
+iter  2376 loss: tensor(4.7662, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(4.7096, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(4.6741, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(4.7332, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(4.6765, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(4.5829, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8481826997324331 ( 188931 / 222748 )    Max acc so far: 0.8481826997324331
+One epoch use time: 40.23231599999997
+
+================= Epoch: 12 / 100 ===============
+iter  2376 loss: tensor(4.3780, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(4.3275, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(4.3023, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(4.3719, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(4.3310, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(4.2327, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8506114533014887 ( 189472 / 222748 )    Max acc so far: 0.8506114533014887
+One epoch use time: 40.340793000000076
+
+================= Epoch: 13 / 100 ===============
+iter  2376 loss: tensor(4.0460, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(3.9986, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(3.9801, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(4.0582, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(4.0302, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(3.9269, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8453678596440821 ( 188304 / 222748 )    Max acc so far: 0.8506114533014887
+One epoch use time: 39.99901999999997
+
+================= Epoch: 14 / 100 ===============
+iter  2376 loss: tensor(3.7587, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(3.7125, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(3.6979, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(3.7832, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(3.7654, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(3.6579, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8470962702246485 ( 188689 / 222748 )    Max acc so far: 0.8506114533014887
+One epoch use time: 40.044235999999955
+
+================= Epoch: 15 / 100 ===============
+iter  2376 loss: tensor(3.5074, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(3.4614, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(3.4487, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(3.5401, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(3.5299, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(3.4194, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8489952771742059 ( 189112 / 222748 )    Max acc so far: 0.8506114533014887
+One epoch use time: 39.01792799999998
+
+================= Epoch: 16 / 100 ===============
+iter  2376 loss: tensor(3.2853, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(3.2396, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(3.2268, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(3.3237, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(3.3190, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(3.2067, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.850813475317399 ( 189517 / 222748 )    Max acc so far: 0.850813475317399
+One epoch use time: 40.369556999999986
+
+================= Epoch: 17 / 100 ===============
+iter  2376 loss: tensor(3.0872, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(3.0423, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(3.0282, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(3.1295, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(3.1288, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(3.0159, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.851760734103112 ( 189728 / 222748 )    Max acc so far: 0.851760734103112
+One epoch use time: 40.66678400000001
+
+================= Epoch: 18 / 100 ===============
+iter  2376 loss: tensor(2.9090, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.8657, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.8492, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.9542, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.9564, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.8436, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.852312927613267 ( 189851 / 222748 )    Max acc so far: 0.852312927613267
+One epoch use time: 40.50698900000009
+
+================= Epoch: 19 / 100 ===============
+iter  2376 loss: tensor(2.7479, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.7066, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.6873, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.7950, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.7994, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.6872, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8525957584355415 ( 189914 / 222748 )    Max acc so far: 0.8525957584355415
+One epoch use time: 40.114779999999996
+
+================= Epoch: 20 / 100 ===============
+iter  2376 loss: tensor(2.6013, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.5624, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.5403, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.6497, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.6556, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.5446, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8535340384649919 ( 190123 / 222748 )    Max acc so far: 0.8535340384649919
+One epoch use time: 40.65244099999995
+
+================= Epoch: 21 / 100 ===============
+iter  2376 loss: tensor(2.4674, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.4311, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.4064, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.5165, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.5237, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.4140, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8547102555354033 ( 190385 / 222748 )    Max acc so far: 0.8547102555354033
+One epoch use time: 40.574015999999915
+
+================= Epoch: 22 / 100 ===============
+iter  2376 loss: tensor(2.3446, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.3110, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.2839, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.3938, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.4021, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.2939, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8557877062869251 ( 190625 / 222748 )    Max acc so far: 0.8557877062869251
+One epoch use time: 39.21544199999994
+
+================= Epoch: 23 / 100 ===============
+iter  2376 loss: tensor(2.2315, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.2006, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.1714, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.2806, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.2898, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.1831, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8551053208109612 ( 190473 / 222748 )    Max acc so far: 0.8557877062869251
+One epoch use time: 39.15516000000002
+
+================= Epoch: 24 / 100 ===============
+iter  2376 loss: tensor(2.1269, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.0988, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(2.0678, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.1756, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.1858, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(2.0805, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8558730044714207 ( 190644 / 222748 )    Max acc so far: 0.8558730044714207
+One epoch use time: 39.55072999999993
+
+================= Epoch: 25 / 100 ===============
+iter  2376 loss: tensor(2.0300, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(2.0044, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.9719, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(2.0781, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(2.0892, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.9853, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8565733474599099 ( 190800 / 222748 )    Max acc so far: 0.8565733474599099
+One epoch use time: 39.98575299999993
+
+================= Epoch: 26 / 100 ===============
+iter  2376 loss: tensor(1.9398, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.9167, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.8831, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.9874, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.9993, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.8967, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8573051160953185 ( 190963 / 222748 )    Max acc so far: 0.8573051160953185
+One epoch use time: 40.21065099999987
+
+================= Epoch: 27 / 100 ===============
+iter  2376 loss: tensor(1.8558, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.8350, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.8004, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.9027, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.9153, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.8141, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8579201608993122 ( 191100 / 222748 )    Max acc so far: 0.8579201608993122
+One epoch use time: 40.49699399999986
+
+================= Epoch: 28 / 100 ===============
+iter  2376 loss: tensor(1.7773, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.7587, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.7234, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.8234, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.8368, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.7368, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8584139924937597 ( 191210 / 222748 )    Max acc so far: 0.8584139924937597
+One epoch use time: 40.22572500000001
+
+================= Epoch: 29 / 100 ===============
+iter  2376 loss: tensor(1.7038, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.6872, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.6514, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.7492, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.7632, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.6644, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8589212922226013 ( 191323 / 222748 )    Max acc so far: 0.8589212922226013
+One epoch use time: 40.793433999999934
+
+================= Epoch: 30 / 100 ===============
+iter  2376 loss: tensor(1.6348, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.6201, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.5839, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.6795, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.6940, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.5964, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.859864061630183 ( 191533 / 222748 )    Max acc so far: 0.859864061630183
+One epoch use time: 39.80148400000007
+
+================= Epoch: 31 / 100 ===============
+iter  2376 loss: tensor(1.5699, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.5570, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.5206, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.6139, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.6290, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.5325, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8604476807872573 ( 191663 / 222748 )    Max acc so far: 0.8604476807872573
+One epoch use time: 39.65275299999985
+
+================= Epoch: 32 / 100 ===============
+iter  2376 loss: tensor(1.5089, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.4976, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.4610, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.5521, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.5677, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.4722, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8607260222314005 ( 191725 / 222748 )    Max acc so far: 0.8607260222314005
+One epoch use time: 41.733772000000044
+
+================= Epoch: 33 / 100 ===============
+iter  2376 loss: tensor(1.4513, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.4415, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.4048, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.4938, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.5098, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.4154, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8613365776572629 ( 191861 / 222748 )    Max acc so far: 0.8613365776572629
+One epoch use time: 39.3821089999999
+
+================= Epoch: 34 / 100 ===============
+iter  2376 loss: tensor(1.3970, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.3885, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.3518, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.4387, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.4550, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.3617, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8616822597733762 ( 191938 / 222748 )    Max acc so far: 0.8616822597733762
+One epoch use time: 38.808933000000025
+
+================= Epoch: 35 / 100 ===============
+iter  2376 loss: tensor(1.3455, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.3383, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.3017, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.3865, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.4031, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.3108, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8620054949988327 ( 192010 / 222748 )    Max acc so far: 0.8620054949988327
+One epoch use time: 38.621975999999904
+
+================= Epoch: 36 / 100 ===============
+iter  2376 loss: tensor(1.2968, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.2907, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.2543, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.3370, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.3539, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.2626, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8625666672652504 ( 192135 / 222748 )    Max acc so far: 0.8625666672652504
+One epoch use time: 38.93936699999995
+
+================= Epoch: 37 / 100 ===============
+iter  2376 loss: tensor(1.2506, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.2456, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.2093, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.2900, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.3071, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.2169, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8630604988596979 ( 192245 / 222748 )    Max acc so far: 0.8630604988596979
+One epoch use time: 39.3720679999999
+
+================= Epoch: 38 / 100 ===============
+iter  2376 loss: tensor(1.2067, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.2028, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.1666, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.2454, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.2627, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.1734, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8634376066227306 ( 192329 / 222748 )    Max acc so far: 0.8634376066227306
+One epoch use time: 39.709342000000106
+
+================= Epoch: 39 / 100 ===============
+iter  2376 loss: tensor(1.1649, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.1621, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.1261, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.2029, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.2203, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.1321, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8615969615888807 ( 191919 / 222748 )    Max acc so far: 0.8634376066227306
+One epoch use time: 39.771097000000054
+
+================= Epoch: 40 / 100 ===============
+iter  2376 loss: tensor(1.1251, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.1233, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.0875, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.1625, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.1799, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.0928, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8623017939555013 ( 192076 / 222748 )    Max acc so far: 0.8634376066227306
+One epoch use time: 39.64004099999988
+
+================= Epoch: 41 / 100 ===============
+iter  2376 loss: tensor(1.0872, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.0864, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.0508, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.1240, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.1414, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.0554, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8628225618187368 ( 192192 / 222748 )    Max acc so far: 0.8634376066227306
+One epoch use time: 39.702788000000055
+
+================= Epoch: 42 / 100 ===============
+iter  2376 loss: tensor(1.0510, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.0513, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(1.0159, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.0872, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.1046, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(1.0197, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8633343509257098 ( 192306 / 222748 )    Max acc so far: 0.8634376066227306
+One epoch use time: 39.68216099999995
+
+================= Epoch: 43 / 100 ===============
+iter  2376 loss: tensor(1.0165, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(1.0177, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.9826, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.0522, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.0694, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.9856, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8637204374450052 ( 192392 / 222748 )    Max acc so far: 0.8637204374450052
+One epoch use time: 40.02006800000004
+
+================= Epoch: 44 / 100 ===============
+iter  2376 loss: tensor(0.9835, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.9857, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.9507, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(1.0187, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.0358, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.9531, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8641514177456139 ( 192488 / 222748 )    Max acc so far: 0.8641514177456139
+One epoch use time: 40.732086999999865
+
+================= Epoch: 45 / 100 ===============
+iter  2376 loss: tensor(0.9520, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.9551, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.9204, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.9867, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(1.0035, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.9221, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8644926104835958 ( 192564 / 222748 )    Max acc so far: 0.8644926104835958
+One epoch use time: 40.38246000000004
+
+================= Epoch: 46 / 100 ===============
+iter  2376 loss: tensor(0.9218, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.9257, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.8913, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.9560, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.9727, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.8925, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8647081006339002 ( 192612 / 222748 )    Max acc so far: 0.8647081006339002
+One epoch use time: 39.29853000000003
+
+================= Epoch: 47 / 100 ===============
+iter  2376 loss: tensor(0.8930, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.8976, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.8635, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.9267, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.9431, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.8641, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8651839747158223 ( 192718 / 222748 )    Max acc so far: 0.8651839747158223
+One epoch use time: 38.703187999999955
+
+================= Epoch: 48 / 100 ===============
+iter  2376 loss: tensor(0.8653, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.8707, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.8369, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.8986, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.9147, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.8371, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8653096773035 ( 192746 / 222748 )    Max acc so far: 0.8653096773035
+One epoch use time: 39.11257599999999
+
+================= Epoch: 49 / 100 ===============
+iter  2376 loss: tensor(0.8388, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.8448, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.8114, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.8716, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.8875, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.8111, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8654308905130461 ( 192773 / 222748 )    Max acc so far: 0.8654308905130461
+One epoch use time: 39.54308900000001
+
+================= Epoch: 50 / 100 ===============
+iter  2376 loss: tensor(0.8134, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.8200, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.7869, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.8458, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.8613, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.7863, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8671054285560365 ( 193146 / 222748 )    Max acc so far: 0.8671054285560365
+One epoch use time: 40.14500599999997
+
+================= Epoch: 51 / 100 ===============
+iter  2376 loss: tensor(0.7890, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.7961, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.7634, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.8209, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.8362, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.7626, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8677474096288182 ( 193289 / 222748 )    Max acc so far: 0.8677474096288182
+One epoch use time: 39.980367000000115
+
+================= Epoch: 52 / 100 ===============
+iter  2376 loss: tensor(0.7656, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.7732, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.7408, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.7971, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.8121, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.7398, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8677518990069496 ( 193290 / 222748 )    Max acc so far: 0.8677518990069496
+One epoch use time: 40.57589000000007
+
+================= Epoch: 53 / 100 ===============
+iter  2376 loss: tensor(0.7431, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.7511, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.7191, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.7742, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.7889, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.7180, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8679853466697793 ( 193342 / 222748 )    Max acc so far: 0.8679853466697793
+One epoch use time: 40.114438000000064
+
+================= Epoch: 54 / 100 ===============
+iter  2376 loss: tensor(0.7215, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.7299, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.6984, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.7522, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.7666, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.6970, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8681828793075583 ( 193386 / 222748 )    Max acc so far: 0.8681828793075583
+One epoch use time: 40.19793600000003
+
+================= Epoch: 55 / 100 ===============
+iter  2376 loss: tensor(0.7007, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.7095, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.6784, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.7310, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.7451, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.6769, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.868533050801803 ( 193464 / 222748 )    Max acc so far: 0.868533050801803
+One epoch use time: 40.536193999999796
+
+================= Epoch: 56 / 100 ===============
+iter  2376 loss: tensor(0.6808, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.6898, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.6592, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.7107, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.7245, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.6576, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.868559987070591 ( 193470 / 222748 )    Max acc so far: 0.868559987070591
+One epoch use time: 40.630791000000045
+
+================= Epoch: 57 / 100 ===============
+iter  2376 loss: tensor(0.6615, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.6708, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.6408, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.6911, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.7046, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.6391, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8687171153051879 ( 193505 / 222748 )    Max acc so far: 0.8687171153051879
+One epoch use time: 40.25366899999972
+
+================= Epoch: 58 / 100 ===============
+iter  2376 loss: tensor(0.6430, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.6526, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.6231, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.6723, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.6855, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.6213, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.868730583439582 ( 193508 / 222748 )    Max acc so far: 0.868730583439582
+One epoch use time: 38.773501000000124
+
+================= Epoch: 59 / 100 ===============
+iter  2376 loss: tensor(0.6252, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.6350, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.6060, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.6542, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.6671, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.6042, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8688922010523102 ( 193544 / 222748 )    Max acc so far: 0.8688922010523102
+One epoch use time: 38.862470999999914
+
+================= Epoch: 60 / 100 ===============
+iter  2376 loss: tensor(0.6081, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.6180, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5896, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.6367, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.6493, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5877, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8691570743620594 ( 193603 / 222748 )    Max acc so far: 0.8691570743620594
+One epoch use time: 38.84314099999983
+
+================= Epoch: 61 / 100 ===============
+iter  2376 loss: tensor(0.5916, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.6016, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5737, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.6198, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.6322, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5718, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8693680751342324 ( 193650 / 222748 )    Max acc so far: 0.8693680751342324
+One epoch use time: 38.95607000000018
+
+================= Epoch: 62 / 100 ===============
+iter  2376 loss: tensor(0.5757, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5858, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5585, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.6036, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.6157, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5565, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8696194803095875 ( 193706 / 222748 )    Max acc so far: 0.8696194803095875
+One epoch use time: 40.02970499999992
+
+================= Epoch: 63 / 100 ===============
+iter  2376 loss: tensor(0.5603, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5705, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5437, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5879, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5998, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5418, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8697945660567098 ( 193745 / 222748 )    Max acc so far: 0.8697945660567098
+One epoch use time: 40.19177200000013
+
+================= Epoch: 64 / 100 ===============
+iter  2376 loss: tensor(0.5455, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5558, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5295, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5728, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5844, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5276, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8705802072296945 ( 193920 / 222748 )    Max acc so far: 0.8705802072296945
+One epoch use time: 40.093051999999716
+
+================= Epoch: 65 / 100 ===============
+iter  2376 loss: tensor(0.5313, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5416, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5158, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5582, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5696, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5139, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8706475479016647 ( 193935 / 222748 )    Max acc so far: 0.8706475479016647
+One epoch use time: 40.85902699999997
+
+================= Epoch: 66 / 100 ===============
+iter  2376 loss: tensor(0.5175, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5279, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.5026, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5441, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5553, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.5007, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8707373354642914 ( 193955 / 222748 )    Max acc so far: 0.8707373354642914
+One epoch use time: 39.11987399999998
+
+================= Epoch: 67 / 100 ===============
+iter  2376 loss: tensor(0.5042, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5146, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4899, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5305, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5414, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4880, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8710426131772226 ( 194023 / 222748 )    Max acc so far: 0.8710426131772226
+One epoch use time: 38.80757100000028
+
+================= Epoch: 68 / 100 ===============
+iter  2376 loss: tensor(0.4914, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.5018, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4775, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5174, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5280, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4757, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8709348681020705 ( 193999 / 222748 )    Max acc so far: 0.8710426131772226
+One epoch use time: 40.1011739999999
+
+================= Epoch: 69 / 100 ===============
+iter  2376 loss: tensor(0.4790, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4894, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4656, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.5047, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5151, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4638, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.870993230017778 ( 194012 / 222748 )    Max acc so far: 0.8710426131772226
+One epoch use time: 40.20747100000017
+
+================= Epoch: 70 / 100 ===============
+iter  2376 loss: tensor(0.4670, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4774, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4541, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4924, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.5026, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4523, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8711413794961121 ( 194045 / 222748 )    Max acc so far: 0.8711413794961121
+One epoch use time: 39.93478899999991
+
+================= Epoch: 71 / 100 ===============
+iter  2376 loss: tensor(0.4555, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4658, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4429, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4805, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4905, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4412, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8713478908901539 ( 194091 / 222748 )    Max acc so far: 0.8713478908901539
+One epoch use time: 40.20177100000001
+
+================= Epoch: 72 / 100 ===============
+iter  2376 loss: tensor(0.4443, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4545, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4322, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4690, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4788, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4305, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8714197209402553 ( 194107 / 222748 )    Max acc so far: 0.8714197209402553
+One epoch use time: 40.5006870000002
+
+================= Epoch: 73 / 100 ===============
+iter  2376 loss: tensor(0.4335, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4437, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4217, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4579, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4675, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4201, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8717564243001059 ( 194182 / 222748 )    Max acc so far: 0.8717564243001059
+One epoch use time: 40.54729899999984
+
+================= Epoch: 74 / 100 ===============
+iter  2376 loss: tensor(0.4231, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4331, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4117, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4471, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4566, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4101, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8718462118627328 ( 194202 / 222748 )    Max acc so far: 0.8718462118627328
+One epoch use time: 39.007872000000134
+
+================= Epoch: 75 / 100 ===============
+iter  2376 loss: tensor(0.4130, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4230, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.4019, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4366, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4460, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.4004, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8721470001975327 ( 194269 / 222748 )    Max acc so far: 0.8721470001975327
+One epoch use time: 38.30441100000007
+
+================= Epoch: 76 / 100 ===============
+iter  2376 loss: tensor(0.4032, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4131, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3925, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4265, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4357, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3910, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8722098514913714 ( 194283 / 222748 )    Max acc so far: 0.8722098514913714
+One epoch use time: 39.39194799999996
+
+================= Epoch: 77 / 100 ===============
+iter  2376 loss: tensor(0.3938, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.4035, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3833, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4167, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4258, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3819, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8724657460448578 ( 194340 / 222748 )    Max acc so far: 0.8724657460448578
+One epoch use time: 38.956200999999965
+
+================= Epoch: 78 / 100 ===============
+iter  2376 loss: tensor(0.3846, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3943, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3744, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.4072, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4161, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3730, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8738035807279976 ( 194638 / 222748 )    Max acc so far: 0.8738035807279976
+One epoch use time: 38.637338
+
+================= Epoch: 79 / 100 ===============
+iter  2376 loss: tensor(0.3758, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3853, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3658, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3980, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.4068, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3645, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8738933682906244 ( 194658 / 222748 )    Max acc so far: 0.8738933682906244
+One epoch use time: 38.9576890000003
+
+================= Epoch: 80 / 100 ===============
+iter  2376 loss: tensor(0.3672, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3766, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3575, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3891, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3977, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3562, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.87404600714709 ( 194692 / 222748 )    Max acc so far: 0.87404600714709
+One epoch use time: 40.50201199999992
+
+================= Epoch: 81 / 100 ===============
+iter  2376 loss: tensor(0.3589, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3682, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3494, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3804, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3890, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3482, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8740953903065347 ( 194703 / 222748 )    Max acc so far: 0.8740953903065347
+One epoch use time: 39.99008799999956
+
+================= Epoch: 82 / 100 ===============
+iter  2376 loss: tensor(0.3509, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3600, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3416, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3720, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3805, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3404, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8742659866755257 ( 194741 / 222748 )    Max acc so far: 0.8742659866755257
+One epoch use time: 40.409447
+
+================= Epoch: 83 / 100 ===============
+iter  2376 loss: tensor(0.3431, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3521, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3340, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3638, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3722, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3329, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8742839441880511 ( 194745 / 222748 )    Max acc so far: 0.8742839441880511
+One epoch use time: 40.22111300000006
+
+================= Epoch: 84 / 100 ===============
+iter  2376 loss: tensor(0.3356, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3444, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3267, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3559, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3642, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3255, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8743333273474958 ( 194756 / 222748 )    Max acc so far: 0.8743333273474958
+One epoch use time: 40.05419800000027
+
+================= Epoch: 85 / 100 ===============
+iter  2376 loss: tensor(0.3282, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3370, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3195, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3482, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3564, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3184, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8744635193133047 ( 194785 / 222748 )    Max acc so far: 0.8744635193133047
+One epoch use time: 40.58521699999983
+
+================= Epoch: 86 / 100 ===============
+iter  2376 loss: tensor(0.3211, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3297, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3126, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3407, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3489, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3115, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8746790094636091 ( 194833 / 222748 )    Max acc so far: 0.8746790094636091
+One epoch use time: 40.022219999999834
+
+================= Epoch: 87 / 100 ===============
+iter  2376 loss: tensor(0.3143, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3227, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.3059, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3334, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3415, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.3048, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8747059457323971 ( 194839 / 222748 )    Max acc so far: 0.8747059457323971
+One epoch use time: 39.92216600000029
+
+================= Epoch: 88 / 100 ===============
+iter  2376 loss: tensor(0.3076, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3159, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2993, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3264, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3344, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2983, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.87521773483937 ( 194953 / 222748 )    Max acc so far: 0.87521773483937
+One epoch use time: 39.17015199999969
+
+================= Epoch: 89 / 100 ===============
+iter  2376 loss: tensor(0.3011, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3093, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2930, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3195, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3275, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2920, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8755768850898773 ( 195033 / 222748 )    Max acc so far: 0.8755768850898773
+One epoch use time: 39.09910899999977
+
+================= Epoch: 90 / 100 ===============
+iter  2376 loss: tensor(0.2948, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.3029, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2868, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3129, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3208, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2858, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8756532045181101 ( 195050 / 222748 )    Max acc so far: 0.8756532045181101
+One epoch use time: 39.178871999999956
+
+================= Epoch: 91 / 100 ===============
+iter  2376 loss: tensor(0.2887, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2966, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2809, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3064, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3142, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2799, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.875783396483919 ( 195079 / 222748 )    Max acc so far: 0.875783396483919
+One epoch use time: 39.778088000000025
+
+================= Epoch: 92 / 100 ===============
+iter  2376 loss: tensor(0.2828, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2905, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2751, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.3001, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3079, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2741, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8757878858620504 ( 195080 / 222748 )    Max acc so far: 0.8757878858620504
+One epoch use time: 39.931433999999626
+
+================= Epoch: 93 / 100 ===============
+iter  2376 loss: tensor(0.2770, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2846, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2694, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2940, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.3017, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2684, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8758372690214952 ( 195091 / 222748 )    Max acc so far: 0.8758372690214952
+One epoch use time: 40.76321400000006
+
+================= Epoch: 94 / 100 ===============
+iter  2376 loss: tensor(0.2714, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2789, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2639, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2880, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.2957, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2630, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8758148221308384 ( 195086 / 222748 )    Max acc so far: 0.8758372690214952
+One epoch use time: 40.24812100000008
+
+================= Epoch: 95 / 100 ===============
+iter  2376 loss: tensor(0.2660, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2733, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2586, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2823, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.2899, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2576, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8758417583996265 ( 195092 / 222748 )    Max acc so far: 0.8758417583996265
+One epoch use time: 40.155161000000135
+
+================= Epoch: 96 / 100 ===============
+iter  2376 loss: tensor(0.2607, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2679, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2534, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2766, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.2842, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2524, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+Acc: 0.8757744177276564 ( 195077 / 222748 )    Max acc so far: 0.8758417583996265
+One epoch use time: 40.15683600000011
+
+================= Epoch: 97 / 100 ===============
+iter  2376 loss: tensor(0.2556, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2626, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2484, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2712, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.2787, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2474, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8759450140966474 ( 195115 / 222748 )    Max acc so far: 0.8759450140966474
+One epoch use time: 40.677360000000135
+
+================= Epoch: 98 / 100 ===============
+iter  2376 loss: tensor(0.2506, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2575, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2435, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2659, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.2733, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2425, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8760303122811428 ( 195134 / 222748 )    Max acc so far: 0.8760303122811428
+One epoch use time: 39.46547299999975
+
+================= Epoch: 99 / 100 ===============
+iter  2376 loss: tensor(0.2457, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  4776 loss: tensor(0.2525, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  7176 loss: tensor(0.2387, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  9576 loss: tensor(0.2607, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  11976 loss: tensor(0.2681, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+iter  14376 loss: tensor(0.2377, device='cuda:0', grad_fn=<DivBackward0>)  lr: 0.015
+******Testing...
+The confusion matrix is saved in checkpoint_bilstm//Con_Matrix.txt
+Max accuracy's model is saved in  checkpoint_bilstm//epoch_max_accuracy.pkl
+Acc: 0.8760752060624563 ( 195144 / 222748 )    Max acc so far: 0.8760752060624563
+One epoch use time: 39.91179599999987
