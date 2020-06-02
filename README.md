@@ -16,9 +16,21 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 使用北京大学人民日报语料库，已分词的txt文档被存放在 data 路径下, 其中 1998-01-2003_shuf.txt 为经过随机shuffle的数据。
 
+
+#### 2.  系统使用（BiLSTM_CRF模型）
+
+```python test.py --bidirection --seed 1 --gpu 0```
+
+即可输出测试语句 "越权 违规 里森 主管 炒 期货 资不抵债 巴林 银行 告 终结" 的词类标注结果:
+
+Result: ['n', 'v', 'n', 'v', 'v', 'n', 'v', 'n', 'n', 'v', 'v']
+
+注：名词(n)、时间词(t)、处所词(s)、方位词(f)、数词(m)、量词(q)、区别词(b)、代词( r)、动词(v)、形容词( a)、状态词(z)、副词(d)、介词( p)、连词( c)、助词(u)、语气词(y)、叹词(e)、拟声词(o)、成语(i)、习用语(l)、简称(j)、前接成分(h)、后接成分(k)、语素(g)、非语素字(x)、标点符号(w)。
+
+
 #### 2.  单向LSTM网络模型训练
 
-```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1```
+```python main.py --epoch 100 --checkpoint checkpoint_lstm --gpu 0 --seed 1```
 
 参数含义：
 
@@ -34,9 +46,10 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 默认为基于mini-batch的模型训练，若要修改batch size大小，可修改 dataset.py 中 Config 类的 BATCH_SIZE 参数。
 
+
 #### 3.  双向LSTM网络模型
 
-```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1 --bidirection```
+```python main.py --epoch 100 --checkpoint checkpoint_bilstm --gpu 0 --seed 1 --bidirection```
 
 参数含义：
 
@@ -44,9 +57,10 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 默认为基于mini-batch的模型训练，若要修改batch size大小，可修改 dataset.py 中 Config 类的 BATCH_SIZE 参数。
 
+
 #### 4.  BiLSTM-CRF模型
 
-```python main.py --epoch 100 --checkpoint checkpoint --gpu 0 --seed 1 --bidirection --crf```
+```python main.py --epoch 100 --checkpoint checkpoint_bilstm_crf --gpu 0 --seed 1 --bidirection --crf```
 
 参数含义：
 
