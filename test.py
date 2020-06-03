@@ -3,8 +3,11 @@ import os
 import argparse
 import torch
 from dataset import Dataset, config
-from lstm import lstmTagger
+from lstm import LSTMTagger
 from lstm_crf import BiLSTM_CRF
+import numpy as np
+import warnings
+warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-g', '--gpu', default = [], nargs='+', type=str, help='Specify GPU id.')
@@ -22,11 +25,13 @@ if args.gpu:
 
 dataset_tool = Dataset(config)
 
-if args.checkpoint == 'checkpoint_bilstm_crf':
+if args.crf:
+    print("BiLSTM_CRF model")
     model = BiLSTM_CRF(dataset_tool.word_to_ix_length,config.TAG_to_ix_crf,config.EMBEDDING_DIM,config.HIDDEN_DIM)
-if args.checkpoint == 'checkpoint_lstm' or 'checkpoint_bilstm':
-    model = lstmTagger(config.EMBEDDING_DIM, config.HIDDEN_DIM, dataset_tool.word_to_ix_length,\
-                          len(config.TAG_to_ix), config.LAYER, config.DROP_RATE, config.BATCH_SIZE, args.bidirection)
+else:
+    print("BiLSTM / LSTM model")
+    model = LSTMTagger(config.EMBEDDING_DIM, config.HIDDEN_DIM, dataset_tool.word_to_ix_length,\
+                          len(config.TAG_to_ix), config.LAYER, config.DROP_RATE, 1, args.bidirection)
 
 model.load_state_dict(torch.load(args.checkpoint+"/epoch_max_accuracy.pkl"))
 print("Loading model...")
@@ -43,12 +48,21 @@ if __name__ == '__main__':
     inputs = torch.tensor(inputs, dtype=torch.long)
     inputs = inputs.cuda(0)
     model = model.cuda(0)
-    with torch.no_grad():
-        score, pred_tag = model(inputs)
-    
-    print("Result:")
-    result = []
-    for item in pred_tag:
-        result.append(list(config.TAG_to_ix.keys())[item])
-    print(result)
-    print("score:",score.cpu().numpy())
+    if args.crf:
+        with torch.no_grad():
+            score, pred_tag = model(inputs)
+        print("Result:")
+        result = []
+        for item in pred_tag:
+            result.append(list(config.TAG_to_ix.keys())[item])
+        print(result)
+        print("score:",score.cpu().numpy())
+    else:
+        with torch.no_grad():
+            result = []
+            score = model(inputs,[],is_test=True)
+            for word in score.cpu().numpy():
+                pred = np.where(word == np.max(word))
+                result.append(list(config.TAG_to_ix.keys())[pred[0][0]])
+            print("Result:")
+            print(result)
