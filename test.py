@@ -44,6 +44,7 @@ if __name__ == '__main__':
     print("Sentence:\n",sentence)
     print("Ground Truth:")
     print(gt)
+    print("Running...")
     inputs = dataset_tool.prepare_sequence(word_str,dataset_tool.word_to_ix)
     inputs = torch.tensor(inputs, dtype=torch.long)
     inputs = inputs.cuda(0)
