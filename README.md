@@ -9,6 +9,8 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 2.  Python 3.7
 
+3.  Numpy, sklearn, matplotlib, seaborn
+
 
 ## 使用说明
 
@@ -17,21 +19,26 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 使用北京大学人民日报语料库，已分词的txt文档被存放在 data 路径下, 其中 1998-01-2003_shuf.txt 为经过随机shuffle的数据。
 
 
-#### 2.  系统使用（BiLSTM_CRF模型）
+#### 2.  系统使用
 
-```python test.py --bidirection --seed 1 --gpu 0 --checkpoint checkpoint_bilstm_crf/```
+加载checkpoint路径中训练好的模型，对输入语句进行测试。
 
-即可输出测试语句 "越权 违规 里森 主管 炒 期货 资不抵债 巴林 银行 告 终结" 的词类标注结果:
+- BiLSTM_CRF模型
+
+```python test.py --bidirection --crf --checkpoint checkpoint_bilstm_crf/ --gpu 0 ```
+
+
+- BiLSTM模型
+
+```python test.py --bidirection --checkpoint checkpoint_bilstm/ --gpu 0 ```
+
+- LSTM模型
+
+```python test.py --checkpoint checkpoint_lstm/ --gpu 0 ```
+
+默认输出测试语句 "越权 违规 里森 主管 炒 期货 资不抵债 巴林 银行 告 终结" 的词类标注结果:
 
 Result: ['n', 'v', 'n', 'v', 'v', 'n', 'v', 'n', 'n', 'v', 'v']
-
-指定不同的--checkpoint参数，可使用不同的模型
-
-- 单向lstm:checkpoint_lstm
-
-- 双向lstm:checkpoint_bilstm
-
-- BiLSTM-crf:checkpoint_bilstm_crf
 
 注：名词(n)、时间词(t)、处所词(s)、方位词(f)、数词(m)、量词(q)、区别词(b)、代词( r)、动词(v)、形容词( a)、状态词(z)、副词(d)、介词( p)、连词( c)、助词(u)、语气词(y)、叹词(e)、拟声词(o)、成语(i)、习用语(l)、简称(j)、前接成分(h)、后接成分(k)、语素(g)、非语素字(x)、标点符号(w)。
 
