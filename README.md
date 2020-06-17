@@ -9,6 +9,8 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 2.  Python 3.7
 
+3.  Numpy, sklearn, matplotlib, seaborn
+
 
 ## 使用说明
 
