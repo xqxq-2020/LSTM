@@ -28,7 +28,7 @@ if args.crf:
     print("BiLSTM_CRF model")
     model = BiLSTM_CRF(dataset_tool.word_to_ix_length,config.TAG_to_ix_crf,config.EMBEDDING_DIM,config.HIDDEN_DIM)
 else:
-    print("BiLSTM / LSTM model")
+    #print("BiLSTM / LSTM model")
     model = LSTMTagger(config.EMBEDDING_DIM, config.HIDDEN_DIM, dataset_tool.word_to_ix_length,\
                           len(config.TAG_to_ix), config.LAYER, config.DROP_RATE, 1, args.bidirection)
 
