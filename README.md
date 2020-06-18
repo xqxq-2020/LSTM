@@ -25,13 +25,19 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 - LSTM模型
 
+百度云链接:https://pan.baidu.com/s/1FKk10wsOaycV0S-pRdTRAw  密码:ajin,替换checkpoint_lstm即可
+
 ```python test.py --checkpoint checkpoint_lstm/ --gpu 0 ```
 
 - BiLSTM模型
 
+百度云链接:https://pan.baidu.com/s/1QfASst6UUy5mHI1E8xlMDw  密码:5ti8,替换checkpoint_bilstm即可
+
 ```python test.py --bidirection --checkpoint checkpoint_bilstm/ --gpu 0 ```
 
 - BiLSTM_CRF模型
+
+百度云链接:https://pan.baidu.com/s/1Dhenux0E1r62DUq1qzdA4w  密码:o0jf,替换checkpoint_bilstm_crf即可
 
 ```python test.py --bidirection --crf --checkpoint checkpoint_bilstm_crf/ --gpu 0 ```
 
