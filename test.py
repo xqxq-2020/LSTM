@@ -32,8 +32,12 @@ else:
     model = LSTMTagger(config.EMBEDDING_DIM, config.HIDDEN_DIM, dataset_tool.word_to_ix_length,\
                           len(config.TAG_to_ix), config.LAYER, config.DROP_RATE, 1, args.bidirection)
 
-model.load_state_dict(torch.load(args.checkpoint+"/epoch_max_accuracy.pkl"))
-print("Loading model...\n")
+if os.path.exists(args.checkpoint+"/epoch_max_accuracy.pkl"):
+    model.load_state_dict(torch.load(args.checkpoint+"/epoch_max_accuracy.pkl"))
+    print("Loading model...\n")
+else:
+    print("未找到模型保存文件，请根据对应模型的百度云链接进行下载")
+    exit()
 
 word_dict = {'n':'名词','t':'时间词','s':'处所词','f':'方位词','m':'数词','q':'量词','b':'区别词','r':'代词','v':'动词','a':'形容词','z':'状态词','d':'副词','p':'介词','c':'连词','u':'助词','y':'语气词','e':'叹词','o':'拟声词','i':'成语','l':'习用语','j':'简称','h':'前接成分','k':'后接成分','g':'语素','x':'非语素字','w':'标点符号'}
 
