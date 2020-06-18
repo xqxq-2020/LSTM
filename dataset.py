@@ -116,7 +116,7 @@ class Dataset(object):
             for word in sent:
                 if word not in word_to_ix:#防止重复记录单词
                     word_to_ix[word] = len(word_to_ix)+1 #空的情况是补0
-        print('word table length:',len(word_to_ix))
+        #print('word table length:',len(word_to_ix))
         return word_to_ix # 56182 
 
     def prepare_sequence(self, seq, to_ix): 

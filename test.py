@@ -17,7 +17,6 @@ parser.add_argument( '--seed', default = 1, type=int, help='seed for pytorch ini
 parser.add_argument( '-b','--bidirection', action='store_true', help='use bi-direction lstm or not')
 parser.add_argument('--weighted_tag', action='store_true',help='use wighted loss or not' )
 parser.add_argument('--crf', action='store_true',help='use crf or not' )
-
 args = parser.parse_args()
 
 if args.gpu:
@@ -34,17 +33,15 @@ else:
                           len(config.TAG_to_ix), config.LAYER, config.DROP_RATE, 1, args.bidirection)
 
 model.load_state_dict(torch.load(args.checkpoint+"/epoch_max_accuracy.pkl"))
-print("Loading model...")
+print("Loading model...\n")
 
-sentence = "越权 违规 里森 主管 炒 期货 资不抵债 巴林 银行 告 终结"
-gt = ['v','v','n','v','v','n','l','n','n','v','v']
+word_dict = {'n':'名词','t':'时间词','s':'处所词','f':'方位词','m':'数词','q':'量词','b':'区别词','r':'代词','v':'动词','a':'形容词','z':'状态词','d':'副词','p':'介词','c':'连词','u':'助词','y':'语气词','e':'叹词','o':'拟声词','i':'成语','l':'习用语','j':'简称','h':'前接成分','k':'后接成分','g':'语素','x':'非语素字','w':'标点符号'}
 
 if __name__ == '__main__':
+    sentence = input("请输入待标注句子(词语间用空格隔开，如“我 爱 你 中国”):")
     word_str = sentence.split()
-    print("Sentence:\n",sentence)
-    print("Ground Truth:")
-    print(gt)
-    print("Running...")
+    print("输入句子:",word_str)
+    print("\nRunning...")
     inputs = dataset_tool.prepare_sequence(word_str,dataset_tool.word_to_ix)
     inputs = torch.tensor(inputs, dtype=torch.long)
     inputs = inputs.cuda(0)
@@ -52,12 +49,9 @@ if __name__ == '__main__':
     if args.crf:
         with torch.no_grad():
             score, pred_tag = model(inputs)
-        print("Result:")
         result = []
         for item in pred_tag:
             result.append(list(config.TAG_to_ix.keys())[item])
-        print(result)
-        print("score:",score.cpu().numpy())
     else:
         with torch.no_grad():
             result = []
@@ -65,5 +59,8 @@ if __name__ == '__main__':
             for word in score.cpu().numpy():
                 pred = np.where(word == np.max(word))
                 result.append(list(config.TAG_to_ix.keys())[pred[0][0]])
-            print("Result:")
-            print(result)
+    print("\n词类标注结果:")
+    print(result)
+    for r in result:
+        print(word_dict[r],end=" ")
+    print()
