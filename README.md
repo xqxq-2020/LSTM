@@ -21,24 +21,37 @@ NLP大作业：使用LSTM及CRF进行汉语的词类标注
 
 #### 2.  系统使用
 
-加载checkpoint路径中训练好的模型，对输入语句进行测试。
-
-- BiLSTM_CRF模型
-
-```python test.py --bidirection --crf --checkpoint checkpoint_bilstm_crf/ --gpu 0 ```
-
-
-- BiLSTM模型
-
-```python test.py --bidirection --checkpoint checkpoint_bilstm/ --gpu 0 ```
+加载checkpoint路径中训练好的模型，并按提示输入语句进行标注测试。
 
 - LSTM模型
 
 ```python test.py --checkpoint checkpoint_lstm/ --gpu 0 ```
 
-默认输出测试语句 "越权 违规 里森 主管 炒 期货 资不抵债 巴林 银行 告 终结" 的词类标注结果:
+- BiLSTM模型
 
-Result: ['n', 'v', 'n', 'v', 'v', 'n', 'v', 'n', 'n', 'v', 'v']
+```python test.py --bidirection --checkpoint checkpoint_bilstm/ --gpu 0 ```
+
+- BiLSTM_CRF模型
+
+```python test.py --bidirection --crf --checkpoint checkpoint_bilstm_crf/ --gpu 0 ```
+
+- 测试示例：
+```
+python test.py --checkpoint checkpoint_lstm/ --gpu 1
+
+Loading model...
+
+请输入待标注句子(词语间用空格隔开，如“我 爱 你 中国”):我 爱 你 中国
+
+输入句子: ['我', '爱', '你', '中国']
+
+Running...
+
+词类标注结果:
+['r', 'v', 'r', 'n']
+
+代词 动词 代词 名词
+```
 
 注：名词(n)、时间词(t)、处所词(s)、方位词(f)、数词(m)、量词(q)、区别词(b)、代词( r)、动词(v)、形容词( a)、状态词(z)、副词(d)、介词( p)、连词( c)、助词(u)、语气词(y)、叹词(e)、拟声词(o)、成语(i)、习用语(l)、简称(j)、前接成分(h)、后接成分(k)、语素(g)、非语素字(x)、标点符号(w)。
 
